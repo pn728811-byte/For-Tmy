@@ -70,7 +70,7 @@ body {
     justify-content: center;
     align-items: center;
     background: black;
-    font-family: 'MyCuteFont', cursive;
+    font-family: Verdana, Arial, sans-serif;
     overflow: hidden;
 }
 
@@ -136,7 +136,7 @@ body {
 
 
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
   body {
     transform: rotate(90deg);
     transform-origin: left top;
@@ -147,4 +147,4 @@ body {
     top: 0;
     left: 0;
   }
-}
+} */

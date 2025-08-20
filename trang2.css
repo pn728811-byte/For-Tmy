@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: pink;
-    font-family: 'MyCuteFont', cursive;
+    font-family: Verdana, Arial, sans-serif;
     text-align: center;
 
 }
@@ -19,7 +19,7 @@ body {
 
 .sacramento {
     top: 200px;
-    font-family: 'MyCuteFont', cursive;
+    font-family: Verdana, Arial, sans-serif;
     color: red;
     text-shadow: 0 0 8px rgba(255,0,0,0.6);
 }
@@ -79,7 +79,7 @@ button {
 
 
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
   body {
     transform: rotate(90deg);
     transform-origin: left top;
@@ -90,4 +90,4 @@ button {
     top: 0;
     left: 0;
   }
-}
+} */

@@ -170,7 +170,7 @@ i{
 
 
 
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) {
   body {
     transform: rotate(90deg);
     transform-origin: left top;
@@ -181,4 +181,4 @@ i{
     top: 0;
     left: 0;
   }
-}
+} */
