@@ -217,3 +217,55 @@ i{
     left: 0;
   }
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Mobile fix (iPhone ≤ 480px) === */
+@media (max-width: 480px) {
+  .book {
+    width: 270px;   /* giảm so với 350px */
+    height: 380px;  /* giữ tỉ lệ */
+  }
+
+  /* Nút luôn nằm trên màn hình */
+  #prev-btn,
+  #next-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%); /* căn giữa theo chiều dọc */
+    z-index: 2;
+    margin: 0;
+  }
+  #prev-btn { left: 8px; }
+  #next-btn { right: 8px; }
+
+  i {
+    font-size: 40px; /* nhỏ hơn để vừa màn hình */
+  }
+
+  button {
+    touch-action: manipulation; /* cải thiện cảm ứng */
+  }
+}
+
+/* Thêm màn hình rất nhỏ (360px) */
+@media (max-width: 360px) {
+  .book { width: 240px; height: 340px; }
+  i { font-size: 34px; }
+}
