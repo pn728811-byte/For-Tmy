@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'MyCuteFont';
+    src: url('path/to/mycute-font.woff2') format('woff2'),
+         url('path/to/mycute-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: pink;
+    font-family: 'MyCuteFont', cursive;
+}
+
+.danhchoem {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.next {
+    position: relative;
+    top: 150px;
+    display: inline-block;
+    background-color: pink;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    font-family: 'MyCuteFont', cursive;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.next1 {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.next1.show {
+    opacity: 1; /* khi thêm class này sẽ mờ dần hiện lên */
+}
+
+.next:hover {
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    transform: translateY(-3px);
+}
+
+.next:active {
+    text-shadow: 0 0 15px red, 0 0 30px red, 0 0 45px red;
+    transform: translateY(-1px) scale(1.05);
+}
+
+
+
+.danhchoem-sub {
+    position: relative;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: pink;
+    font-family: 'MyCuteFont', cursive;
+    text-align: center;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* căn giữa theo chiều dọc */
+    align-items: center;     /* căn giữa theo chiều ngang */
+    height: 100vh;           /* chiếm toàn bộ chiều cao màn hình */
+    text-align: center;
+    gap: 30px; /* khoảng cách giữa các phần tử */
+}
+
+
+.sacramento {
+    top: 200px;
+    font-family: 'MyCuteFont', cursive;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.6);
+}
+
+#countdown {
+    font-size: 200px;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+.buttons {
+    margin-top: 70px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#yes {
+    background-color: red;
+    color: white;
+}
+
+#no {
+    background-color: gray;
+    color: white;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
