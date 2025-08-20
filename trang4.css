@@ -153,7 +153,42 @@ i{
 
 
 
+/* === Mobile fix (iPhone ≤ 480px) === */
+@media (max-width: 480px) {
+  /* Giảm kích thước sách (không dùng transform để khỏi đè JS) */
+  .book {
+    width: 270px;   /* có thể chỉnh 260–300 tùy máy */
+    height: 380px;  /* giữ tỉ lệ đứng */
+  }
 
+  /* Nút luôn nằm trong màn hình và nổi lên trên */
+  #prev-btn,
+  #next-btn {
+    position: fixed;
+    top: calc(50% - 22px); /* canh giữa theo chiều dọc, 22px ≈ nửa icon */
+    z-index: 2;            /* cao hơn .book và canvas */
+    margin: 0;
+    /* KHÔNG dùng transform ở đây để khỏi xung đột với JS */
+  }
+  #prev-btn { left: 8px; }
+  #next-btn { right: 8px; }
+
+  /* Thu nhỏ icon để đỡ che */
+  i {
+    font-size: 40px;
+  }
+
+  /* Cảm ứng mượt hơn trên mobile */
+  button {
+    touch-action: manipulation;
+  }
+}
+
+/* Màn hình rất nhỏ (tùy chọn) */
+@media (max-width: 360px) {
+  .book { width: 240px; height: 340px; }
+  i { font-size: 34px; }
+}
 
 
 
