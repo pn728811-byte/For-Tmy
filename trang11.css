@@ -145,7 +145,6 @@ body, html {
   font-size: 90px; /* to hơn */
   color: rgba(255, 255, 255, 0.3); /* mờ */
   font-weight: bold;
-  font-family: 'Sacramento', cursive;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
   z-index: 10;
