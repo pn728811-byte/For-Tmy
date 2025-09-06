@@ -139,6 +139,7 @@ body, html {
 
 #birthdayText {
   position: absolute;
+  font-family: sans-serif;
   bottom: 40px; /* cách mép dưới */
   width: 100%;
   text-align: center;
