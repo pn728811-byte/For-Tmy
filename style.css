@@ -5,10 +5,24 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d; }
+    to { text-shadow: 0 0 20px #ff1a4d, 0 0 40px #ff1a4d; }
+}
 body {
-    background-color: pink;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(270deg, pink, #ffdde1, #ffc1cc);
+    background-size: 600% 600%;
+    background-position: 0% 50%;   /* 👈 thêm dòng này */
+    animation: bgMove 10s ease infinite;
+    overflow: hidden;
 }
 
 
@@ -16,6 +30,10 @@ body {
     font-size: 50px;
     text-align: center;
     margin-top: 200px;
+    font-family: 'Comic Neue', cursive;
+    color: red;
+    text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d, 0 0 30px #ff4d6d;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .next {
@@ -71,15 +89,33 @@ body {
 
 
 
-/* @media screen and (orientation: portrait) {
-  body {
-    transform: rotate(90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-} */
+
+
+
+
+
+
+
+
+
+
+/* 🌸 Hoa rơi */
+.sakura {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(var(--x-move)) translateY(100vh) rotate(360deg);
+        opacity: 0.8;
+    }
+}

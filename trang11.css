@@ -1,0 +1,157 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.top-half {
+  height: 100vh; /* chiếm toàn màn hình */
+  position: relative;
+  overflow: hidden;
+  background: #e8f5e9;
+}
+
+#leafCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-container {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+  text-shadow: 0 0 8px rgba(0,0,0,0.25);
+}
+
+.text-container p {
+  display: none;
+}
+
+
+
+
+
+
+/* Nửa trang dưới */
+.bottom-half {
+  height: 100vh;
+  position: relative; /* cần để z-index của wishes có hiệu lực */
+  background: radial-gradient(circle at 80% 20%, #ffffff30, transparent 100%), #000010;
+  overflow: hidden;
+}
+/* Mặt trăng */
+.bottom-half::before {
+  content: "";
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff, #ddd, #bbb);
+  box-shadow: 0 0 40px 15px rgba(255, 255, 200, 0.6);
+}
+
+/* Canvas pháo hoa */
+#fireworkCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Countdown text */
+.countdown {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.ready-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.number-text {
+  font-size: 60px;
+  display: none; /* ẩn sẵn, chỉ hiện khi cần */
+}
+
+/* Wishes text */
+.wishes {
+  position: relative;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  height: 400px; /* đủ chứa nhiều hàng */
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: whitesmoke;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 10; /* trên canvas pháo hoa */
+}
+
+.wishes span {
+  position: absolute;
+  white-space: nowrap;
+  left: -100%;
+  animation: moveText 12s linear infinite;
+}
+
+@keyframes moveText {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#birthdayText {
+  position: absolute;
+  bottom: 40px; /* cách mép dưới */
+  width: 100%;
+  text-align: center;
+  font-size: 90px; /* to hơn */
+  color: rgba(255, 255, 255, 0.3); /* mờ */
+  font-weight: bold;
+  font-family: 'Sacramento', cursive;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+#birthdayText:hover {
+  transform: scale(1.3); /* nở to hơn khi hover */
+  color: rgba(255, 255, 255, 0.8); /* nổi bật hơn */
+}
